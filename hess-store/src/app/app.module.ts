@@ -15,6 +15,7 @@ import { I18nModule } from '@spartacus/core';
 import { SBoxModule } from "./s-box/s-box.module";
 import { TopHModule } from "./top-h/bottom-h.module";
 import { LoginComponent } from "@spartacus/user/account/components";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -44,7 +45,8 @@ import { LoginComponent } from "@spartacus/user/account/components";
   I18nModule,
   CustomHeaderModule,
   SBoxModule,
-  TopHModule
+  TopHModule,
+  BrowserAnimationsModule
    
   ], 
   providers: [],

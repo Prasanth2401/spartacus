@@ -13,7 +13,7 @@ import { CmsConfig, ConfigModule } from '@spartacus/core';
     CommonModule,
     ConfigModule.withConfig({
       cmsComponents:{
-        JspIncludeComponent :{
+        SearchBoxComponent :{
         component:CustomSBoxComponent
         }
       }
