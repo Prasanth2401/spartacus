@@ -1,0 +1,16 @@
+<ng-container *ngIf="user$ | async as user">
+  <div class="cx-login-greet">
+    <!-- {{ 'cxLogin.greeting' | cxTranslate: { name: user.user?.name} }} -->
+    Hello, {{ user.user?.name }}
+  </div>
+  <div *ngIf="user$ | async as customerId">
+    {{ user.customerId }}
+  </div>
+  <!-- <cx-page-slot position="HeaderLinks"></cx-page-slot> -->
+</ng-container>
+
+<ng-template #login>
+  <a role="link" [routerLink]="{ cxRoute: 'login' } | cxUrl">{{
+    "cxLogin.signInRegister" | cxTranslate
+  }}</a>
+</ng-template>

@@ -14,7 +14,7 @@ import { CmsConfig,ConfigModule } from '@spartacus/core';
     CommonModule,
     ConfigModule.withConfig({
       cmsComponents:{
-        NavigationComponent:{
+        BreadcrumbComponent  :{
           component:CustomHeaderIdComponent
         }
       }

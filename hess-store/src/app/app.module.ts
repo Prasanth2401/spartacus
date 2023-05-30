@@ -10,17 +10,20 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { CustomLogoModule } from "./custom-logo/custom-logo.module";
 import { CustomHeaderModule } from "./custom-header/custom-header.module";
-import{ BaseStorefrontModule } from "@spartacus/storefront";
+import { BaseStorefrontModule } from "@spartacus/storefront";
 import { I18nModule } from '@spartacus/core';
 import { SBoxModule } from "./s-box/s-box.module";
 import { TopHModule } from "./top-h/bottom-h.module";
-import { LoginComponent } from "@spartacus/user/account/components";
+// import { LoginComponent } from "@spartacus/user/account/components";
+import { VendorIdModule } from "./vendor-id/vendor-id.module";
+// import { CustomLoginComponent } from "./login-greet/custom-login/custom-login.component";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
   
     
   ],
@@ -29,6 +32,7 @@ import { LoginComponent } from "@spartacus/user/account/components";
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule,
+    VendorIdModule,
     BaseStorefrontModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
@@ -44,11 +48,12 @@ import { LoginComponent } from "@spartacus/user/account/components";
   I18nModule,
   CustomHeaderModule,
   SBoxModule,
+  // CustomLoginComponent,
   TopHModule
    
   ], 
   providers: [],
-  entryComponents:[LoginComponent],
+  // entryComponents:[LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
